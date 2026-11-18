@@ -1,0 +1,22 @@
+[
+    {
+        "event": "carrier_poll_retry",
+        "attempt": 1,
+        "outcome": "transient_error",
+        "error_type": "TransientCarrierError",
+        "next_action": "retry"
+    },
+    {
+        "event": "carrier_poll_retry",
+        "attempt": 2,
+        "outcome": "transient_error",
+        "error_type": "CarrierTimeoutError",
+        "next_action": "retry"
+    },
+    {
+        "event": "carrier_poll_succeeded",
+        "attempt": 3,
+        "outcome": "success",
+        "next_action": "continue_workflow"
+    }
+]

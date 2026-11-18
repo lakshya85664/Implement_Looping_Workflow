@@ -1,0 +1,336 @@
+{
+    "run_id": "RUN-SHIP-2001",
+    "shipment": {
+        "shipment_id": "SHIP-2001",
+        "carrier": "DemoCarrier",
+        "tracking_number": "TRACK-2001",
+        "max_attempts": 5,
+        "polling_interval_seconds": 10
+    },
+    "final_state": "completed",
+    "attempts": 3,
+    "result": {
+        "shipment_id": "SHIP-2001",
+        "status": "completed",
+        "attempts": 3,
+        "message": "Shipment delivered successfully.",
+        "delivered": true
+    },
+    "events": [
+        {
+            "event_id": "EVT-0001",
+            "event_type": "start",
+            "run_id": "RUN-SHIP-2001",
+            "state": "running",
+            "timestamp": "2026-11-18T07:23:21.124260Z",
+            "details": {
+                "previous_state": "created",
+                "next_state": "running"
+            }
+        },
+        {
+            "event_id": "EVT-0002",
+            "event_type": "workflow.started",
+            "run_id": "RUN-SHIP-2001",
+            "state": "running",
+            "timestamp": "2026-11-18T07:23:21.124288Z",
+            "details": {
+                "shipment_id": "SHIP-2001",
+                "max_attempts": 5
+            }
+        },
+        {
+            "event_id": "EVT-0003",
+            "event_type": "poll.started",
+            "run_id": "RUN-SHIP-2001",
+            "state": "running",
+            "timestamp": "2026-11-18T07:23:21.124302Z",
+            "details": {
+                "attempt": 1
+            }
+        },
+        {
+            "event_id": "EVT-0004",
+            "event_type": "poll.completed",
+            "run_id": "RUN-SHIP-2001",
+            "state": "running",
+            "timestamp": "2026-11-18T07:23:21.124323Z",
+            "details": {
+                "attempt": 1,
+                "carrier_status": "in_transit",
+                "location": "Jaipur Hub"
+            }
+        },
+        {
+            "event_id": "EVT-0005",
+            "event_type": "wait",
+            "run_id": "RUN-SHIP-2001",
+            "state": "waiting",
+            "timestamp": "2026-11-18T07:23:21.124334Z",
+            "details": {
+                "previous_state": "running",
+                "next_state": "waiting"
+            }
+        },
+        {
+            "event_id": "EVT-0006",
+            "event_type": "resume",
+            "run_id": "RUN-SHIP-2001",
+            "state": "running",
+            "timestamp": "2026-11-18T07:23:21.124344Z",
+            "details": {
+                "previous_state": "waiting",
+                "next_state": "running"
+            }
+        },
+        {
+            "event_id": "EVT-0007",
+            "event_type": "poll.started",
+            "run_id": "RUN-SHIP-2001",
+            "state": "running",
+            "timestamp": "2026-11-18T07:23:21.124352Z",
+            "details": {
+                "attempt": 2
+            }
+        },
+        {
+            "event_id": "EVT-0008",
+            "event_type": "poll.completed",
+            "run_id": "RUN-SHIP-2001",
+            "state": "running",
+            "timestamp": "2026-11-18T07:23:21.124369Z",
+            "details": {
+                "attempt": 2,
+                "carrier_status": "in_transit",
+                "location": "Udaipur Hub"
+            }
+        },
+        {
+            "event_id": "EVT-0009",
+            "event_type": "wait",
+            "run_id": "RUN-SHIP-2001",
+            "state": "waiting",
+            "timestamp": "2026-11-18T07:23:21.124378Z",
+            "details": {
+                "previous_state": "running",
+                "next_state": "waiting"
+            }
+        },
+        {
+            "event_id": "EVT-0010",
+            "event_type": "resume",
+            "run_id": "RUN-SHIP-2001",
+            "state": "running",
+            "timestamp": "2026-11-18T07:23:21.124386Z",
+            "details": {
+                "previous_state": "waiting",
+                "next_state": "running"
+            }
+        },
+        {
+            "event_id": "EVT-0011",
+            "event_type": "poll.started",
+            "run_id": "RUN-SHIP-2001",
+            "state": "running",
+            "timestamp": "2026-11-18T07:23:21.124394Z",
+            "details": {
+                "attempt": 3
+            }
+        },
+        {
+            "event_id": "EVT-0012",
+            "event_type": "poll.completed",
+            "run_id": "RUN-SHIP-2001",
+            "state": "running",
+            "timestamp": "2026-11-18T07:23:21.124408Z",
+            "details": {
+                "attempt": 3,
+                "carrier_status": "delivered",
+                "location": "Customer Address"
+            }
+        },
+        {
+            "event_id": "EVT-0013",
+            "event_type": "delivered",
+            "run_id": "RUN-SHIP-2001",
+            "state": "completed",
+            "timestamp": "2026-11-18T07:23:21.124415Z",
+            "details": {
+                "previous_state": "running",
+                "next_state": "completed"
+            }
+        },
+        {
+            "event_id": "EVT-0014",
+            "event_type": "workflow.finished",
+            "run_id": "RUN-SHIP-2001",
+            "state": "completed",
+            "timestamp": "2026-11-18T07:23:21.125025Z",
+            "details": {
+                "final_status": "completed",
+                "attempts": 3
+            }
+        }
+    ],
+    "traces": [
+        {
+            "run_id": "RUN-SHIP-2001",
+            "shipment_id": "SHIP-2001",
+            "event_type": "state_transition",
+            "state": "running",
+            "attempt": 0,
+            "timestamp": "2026-11-18T07:23:21.124277Z",
+            "details": {
+                "event": "start",
+                "previous_state": "created",
+                "next_state": "running"
+            }
+        },
+        {
+            "run_id": "RUN-SHIP-2001",
+            "shipment_id": "SHIP-2001",
+            "event_type": "carrier_poll_started",
+            "state": "running",
+            "attempt": 1,
+            "timestamp": "2026-11-18T07:23:21.124311Z",
+            "details": {
+                "tracking_number": "TRACK-2001"
+            }
+        },
+        {
+            "run_id": "RUN-SHIP-2001",
+            "shipment_id": "SHIP-2001",
+            "event_type": "carrier_poll_completed",
+            "state": "running",
+            "attempt": 1,
+            "timestamp": "2026-11-18T07:23:21.124327Z",
+            "details": {
+                "carrier_status": "in_transit",
+                "location": "Jaipur Hub"
+            }
+        },
+        {
+            "run_id": "RUN-SHIP-2001",
+            "shipment_id": "SHIP-2001",
+            "event_type": "state_transition",
+            "state": "waiting",
+            "attempt": 1,
+            "timestamp": "2026-11-18T07:23:21.124339Z",
+            "details": {
+                "event": "wait",
+                "previous_state": "running",
+                "next_state": "waiting"
+            }
+        },
+        {
+            "run_id": "RUN-SHIP-2001",
+            "shipment_id": "SHIP-2001",
+            "event_type": "state_transition",
+            "state": "running",
+            "attempt": 1,
+            "timestamp": "2026-11-18T07:23:21.124347Z",
+            "details": {
+                "event": "resume",
+                "previous_state": "waiting",
+                "next_state": "running"
+            }
+        },
+        {
+            "run_id": "RUN-SHIP-2001",
+            "shipment_id": "SHIP-2001",
+            "event_type": "carrier_poll_started",
+            "state": "running",
+            "attempt": 2,
+            "timestamp": "2026-11-18T07:23:21.124358Z",
+            "details": {
+                "tracking_number": "TRACK-2001"
+            }
+        },
+        {
+            "run_id": "RUN-SHIP-2001",
+            "shipment_id": "SHIP-2001",
+            "event_type": "carrier_poll_completed",
+            "state": "running",
+            "attempt": 2,
+            "timestamp": "2026-11-18T07:23:21.124372Z",
+            "details": {
+                "carrier_status": "in_transit",
+                "location": "Udaipur Hub"
+            }
+        },
+        {
+            "run_id": "RUN-SHIP-2001",
+            "shipment_id": "SHIP-2001",
+            "event_type": "state_transition",
+            "state": "waiting",
+            "attempt": 2,
+            "timestamp": "2026-11-18T07:23:21.124381Z",
+            "details": {
+                "event": "wait",
+                "previous_state": "running",
+                "next_state": "waiting"
+            }
+        },
+        {
+            "run_id": "RUN-SHIP-2001",
+            "shipment_id": "SHIP-2001",
+            "event_type": "state_transition",
+            "state": "running",
+            "attempt": 2,
+            "timestamp": "2026-11-18T07:23:21.124389Z",
+            "details": {
+                "event": "resume",
+                "previous_state": "waiting",
+                "next_state": "running"
+            }
+        },
+        {
+            "run_id": "RUN-SHIP-2001",
+            "shipment_id": "SHIP-2001",
+            "event_type": "carrier_poll_started",
+            "state": "running",
+            "attempt": 3,
+            "timestamp": "2026-11-18T07:23:21.124401Z",
+            "details": {
+                "tracking_number": "TRACK-2001"
+            }
+        },
+        {
+            "run_id": "RUN-SHIP-2001",
+            "shipment_id": "SHIP-2001",
+            "event_type": "carrier_poll_completed",
+            "state": "running",
+            "attempt": 3,
+            "timestamp": "2026-11-18T07:23:21.124411Z",
+            "details": {
+                "carrier_status": "delivered",
+                "location": "Customer Address"
+            }
+        },
+        {
+            "run_id": "RUN-SHIP-2001",
+            "shipment_id": "SHIP-2001",
+            "event_type": "state_transition",
+            "state": "completed",
+            "attempt": 3,
+            "timestamp": "2026-11-18T07:23:21.124421Z",
+            "details": {
+                "event": "delivered",
+                "previous_state": "running",
+                "next_state": "completed"
+            }
+        },
+        {
+            "run_id": "RUN-SHIP-2001",
+            "shipment_id": "SHIP-2001",
+            "event_type": "workflow_finished",
+            "state": "completed",
+            "attempt": 3,
+            "timestamp": "2026-11-18T07:23:21.125042Z",
+            "details": {
+                "final_status": "completed",
+                "delivered": true
+            }
+        }
+    ]
+}

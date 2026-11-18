@@ -1,0 +1,30 @@
+[
+    {
+        "timestamp": "2026-11-18T07:28:55.917201+00:00",
+        "event": "carrier_poll_succeeded",
+        "tracking_number": "TRACK-OBS-001",
+        "outcome": "success",
+        "latency_ms": 0.005,
+        "details": {
+            "status": "in_transit",
+            "location": "Jaipur Hub",
+            "api_key": "[REDACTED]",
+            "tracking_number": "TRACK-OBS-001"
+        },
+        "next_action": "continue_workflow"
+    },
+    {
+        "timestamp": "2026-11-18T07:28:55.917857+00:00",
+        "event": "carrier_poll_succeeded",
+        "tracking_number": "TRACK-OBS-001",
+        "outcome": "success",
+        "latency_ms": 0.004,
+        "details": {
+            "status": "delivered",
+            "location": "Udaipur",
+            "authorization": "[REDACTED]",
+            "tracking_number": "TRACK-OBS-001"
+        },
+        "next_action": "continue_workflow"
+    }
+]

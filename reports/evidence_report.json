@@ -1,0 +1,40 @@
+{
+    "report_name": "Looping Workflow Evidence Report",
+    "generated_at": "2026-11-18T07:32:27.572652+00:00",
+    "expected_evidence_count": 5,
+    "found_evidence_count": 5,
+    "valid_json_count": 5,
+    "evidence_complete": true,
+    "evidence": [
+        {
+            "path": "outputs/task2_looping_workflow.json",
+            "exists": true,
+            "valid": true,
+            "message": "valid JSON"
+        },
+        {
+            "path": "outputs/task3_failure_recovery.json",
+            "exists": true,
+            "valid": true,
+            "message": "valid JSON"
+        },
+        {
+            "path": "outputs/task4_looping_measurements.json",
+            "exists": true,
+            "valid": true,
+            "message": "valid JSON"
+        },
+        {
+            "path": "traces/task3_recovery_trace.json",
+            "exists": true,
+            "valid": true,
+            "message": "valid JSON"
+        },
+        {
+            "path": "traces/task4_looping_observability.json",
+            "exists": true,
+            "valid": true,
+            "message": "valid JSON"
+        }
+    ]
+}
